@@ -24,7 +24,13 @@
       "image": "gn018681442/multi-nginx",
       "hostname": "nginx",
       "essential": true,
-      
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "server"]
     }
   ]
 }

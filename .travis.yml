@@ -19,7 +19,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # take the images and push them to docker hun
 
-  - docker push gn018681442/multi-client
   - docker push gn018681442/multi-nginx
   - docker push gn018681442/multi-server
   - docker push gn018681442/multi-worker
+  - docker push gn018681442/multi-client
