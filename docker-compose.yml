@@ -34,6 +34,7 @@ services:
       # postgres config
       - PGUSER=postgres
       - PGHOST=postgres
+      # postgrespassword
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432

@@ -23,3 +23,16 @@ after_success:
   - docker push gn018681442/multi-server
   - docker push gn018681442/multi-worker
   - docker push gn018681442/multi-client
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-app
+  env: MultiApp-env
+  bucket_name: elasticbeanstalk-us-east-1-340239792859
+  bucket_path: docker-mult
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
